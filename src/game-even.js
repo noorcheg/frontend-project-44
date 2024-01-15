@@ -7,7 +7,8 @@ export default () => {
     `Hello, ${name}!\nAnswer "yes" if the number is even, otherwise answer "no".`
   );
   let correctAnswer;
-  for (let i = 0; i < 3; i += 1) {
+  const gamesCount = 3;
+  for (let i = 0; i < gamesCount; i += 1) {
     const randomNumber = Math.floor(Math.random() * 100) + 1;
     console.log(`Question: ${randomNumber}`);
     if (randomNumber % 2 === 0) {
@@ -22,7 +23,7 @@ export default () => {
       console.log(
         `'${yourAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.\nLet's try again, ${name}!`
       );
-      return undefined;
+      return;
     }
   }
   console.log(`Congratulations, ${name}!`);
