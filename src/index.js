@@ -1,20 +1,34 @@
-import readlineSync from "readline-sync";
-import { gameRules, createGameData } from "./games/game-even.js";
+import readlineSync, { question } from "readline-sync";
+import * as gameEven from "./games/game-even.js";
+import * as gameCalc from "./games/game-calc.js";
 
-export default () => {
+export default (gameTitle) => {
+  let gameRules;
+  let gameData;
+  switch (gameTitle) {
+    case "gameCalc":
+      gameRules = gameCalc.createGameRules();
+      gameData = gameCalc.createGameData();
+      break;
+    case "gameEven":
+      gameRules = gameEven.createGameRules();
+      gameData = gameEven.createGameData();
+      break;
+  }
+
   console.log(`Welcome to the Brain Games!`);
   const name = readlineSync.question("May I have your name? ");
   console.log(`Hello, ${name}!`);
-  console.log(gameRules());
+  console.log(gameRules);
+  let [gameQuestion, correctAnswer] = gameData;
   for (let i = 0; i < 3; i += 1) {
-    const [question, correctAnswer] = createGameData();
-    console.log(`Question: ${question}`);
+    console.log(`Question: ${gameQuestion[i]}`);
     const yourAnswer = readlineSync.question("Your answer: ");
-    if (yourAnswer === correctAnswer) {
+    if (yourAnswer === correctAnswer[i]) {
       console.log(`Correct!`);
     } else {
       console.log(
-        `'${yourAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.\nLet's try again, ${name}!`
+        `'${yourAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer[i]}'.\nLet's try again, ${name}!`
       );
       return;
     }
