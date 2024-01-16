@@ -10,3 +10,7 @@
 ### Калькулятор
 
 [![asciicast](https://asciinema.org/a/bwfD1rzBhVUUrbqA5HDbVoKLA.svg)](https://asciinema.org/a/bwfD1rzBhVUUrbqA5HDbVoKLA)
+
+### НОД
+
+[![asciicast](https://asciinema.org/a/dqjwzdsdDtyfUDQfpQB5eR3kL.svg)](https://asciinema.org/a/dqjwzdsdDtyfUDQfpQB5eR3kL)
