@@ -5,7 +5,8 @@ const createGameRules = () => {
 const createGameData = () => {
   const questions = [];
   const correctAnswers = [];
-  for (let i = 0; i < 3; i += 1) {
+  const countOfRounds = 3;
+  for (let i = 0; i < countOfRounds; i += 1) {
     const firstNumber = Math.floor(Math.random() * 100) + 1;
     const secondNumber = Math.floor(Math.random() * 100) + 1;
     const operations = ["+", "-", "*"];

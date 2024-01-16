@@ -20,8 +20,9 @@ export default (gameTitle) => {
   const name = readlineSync.question("May I have your name? ");
   console.log(`Hello, ${name}!`);
   console.log(gameRules);
+  const countOfRounds = 3;
   let [gameQuestion, correctAnswer] = gameData;
-  for (let i = 0; i < 3; i += 1) {
+  for (let i = 0; i < countOfRounds; i += 1) {
     console.log(`Question: ${gameQuestion[i]}`);
     const yourAnswer = readlineSync.question("Your answer: ");
     if (yourAnswer === correctAnswer[i]) {
