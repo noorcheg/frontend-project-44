@@ -3,6 +3,7 @@ import * as gameEven from "./games/game-even.js";
 import * as gameCalc from "./games/game-calc.js";
 import * as gameGcd from "./games/game-gcd.js";
 import * as gameProgression from "./games/game-progression.js";
+import * as gamePrime from "./games/game-prime.js";
 
 export default (gameTitle) => {
   let gameRules;
@@ -24,6 +25,9 @@ export default (gameTitle) => {
       gameRules = gameProgression.createGameRules();
       gameData = gameProgression.createGameData();
       break;
+    case "gamePrime":
+      gameRules = gamePrime.createGameRules();
+      gameData = gamePrime.createGameData();
   }
 
   console.log(`Welcome to the Brain Games!`);
