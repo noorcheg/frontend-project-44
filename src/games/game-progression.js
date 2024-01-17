@@ -1,6 +1,4 @@
-const createGameRules = () => {
-  return "What number is missing in the progression?";
-};
+const createGameRules = () => 'What number is missing in the progression?';
 
 const createGameData = () => {
   const questions = [];
@@ -9,24 +7,22 @@ const createGameData = () => {
   for (let i = 0; i < countOfRounds; i += 1) {
     const minFirstNumber = 1;
     const maxFirstNumber = 99;
-    let firtsNumber =
-      Math.floor(Math.random() * (maxFirstNumber - minFirstNumber + 1)) +
-      minFirstNumber;
+    const firtsNumber = Math.floor(Math.random() * (maxFirstNumber - minFirstNumber + 1))
+      + minFirstNumber;
     const minNubersGap = 2;
     const maxNumbersGap = 9;
-    let numbersGap =
-      Math.floor(Math.random() * (maxNumbersGap - minNubersGap)) + minNubersGap;
+    const numbersGap = Math.floor(Math.random() * (maxNumbersGap - minNubersGap)) + minNubersGap;
     const progressionLength = 10;
-    let hiddenElementPosition = Math.floor(Math.random() * progressionLength);
+    const hiddenElementPosition = Math.floor(Math.random() * progressionLength);
     let progressionElement;
     const progression = [];
-    for (let i = 0; i < progressionLength; i += 1) {
-      progressionElement = firtsNumber + i * numbersGap;
+    for (let j = 0; j < progressionLength; j += 1) {
+      progressionElement = firtsNumber + j * numbersGap;
       progression.push(progressionElement);
     }
     correctAnswers.push(String(progression[hiddenElementPosition]));
-    progression[hiddenElementPosition] = "..";
-    questions.push(progression.join(" "));
+    progression[hiddenElementPosition] = '..';
+    questions.push(progression.join(' '));
   }
   return [questions, correctAnswers];
 };
