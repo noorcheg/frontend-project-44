@@ -26,7 +26,7 @@ const createGameData = () => {
     }
     correctAnswers.push(String(progression[hiddenElementPosition]));
     progression[hiddenElementPosition] = "..";
-    questions.push(progression);
+    questions.push(progression.join(" "));
   }
   return [questions, correctAnswers];
 };
