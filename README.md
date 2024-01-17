@@ -14,3 +14,7 @@
 ### НОД
 
 [![asciicast](https://asciinema.org/a/dqjwzdsdDtyfUDQfpQB5eR3kL.svg)](https://asciinema.org/a/dqjwzdsdDtyfUDQfpQB5eR3kL)
+
+### Арифметическая прогрессия
+
+[![asciicast](https://asciinema.org/a/puj5GgFxWlqJMiJizekzv6RcR.svg)](https://asciinema.org/a/puj5GgFxWlqJMiJizekzv6RcR)
