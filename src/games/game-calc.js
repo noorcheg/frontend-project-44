@@ -7,10 +7,14 @@ const createGameData = () => {
   const correctAnswers = [];
   const countOfRounds = 3;
   for (let i = 0; i < countOfRounds; i += 1) {
-    const firstNumber = Math.floor(Math.random() * 100) + 1;
-    const secondNumber = Math.floor(Math.random() * 100) + 1;
+    const minNumber = 1;
+    const maxNumber = 99;
+    const firstNumber =
+      Math.floor(Math.random() * (maxNumber - minNumber + 1)) + minNumber;
+    const secondNumber =
+      Math.floor(Math.random() * (maxNumber - minNumber + 1)) + minNumber;
     const operations = ["+", "-", "*"];
-    const operationNumber = Math.floor(Math.random() * 3);
+    const operationNumber = Math.floor(Math.random() * operations.length);
     const question =
       firstNumber + " " + operations[operationNumber] + " " + secondNumber;
     let correctAnswer;

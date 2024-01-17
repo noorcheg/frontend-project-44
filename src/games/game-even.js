@@ -7,7 +7,10 @@ const createGameData = () => {
   const correctAnswers = [];
   const countOfRounds = 3;
   for (let i = 0; i < countOfRounds; i += 1) {
-    let question = Math.floor(Math.random() * 100) + 1;
+    const minNumber = 1;
+    const maxNumber = 99;
+    let question =
+      Math.floor(Math.random() * (maxNumber - minNumber + 1)) + minNumber;
     let correctAnswer;
     if (question % 2 === 0) {
       correctAnswer = "yes";
