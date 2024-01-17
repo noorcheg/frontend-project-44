@@ -2,6 +2,7 @@ import readlineSync, { question } from "readline-sync";
 import * as gameEven from "./games/game-even.js";
 import * as gameCalc from "./games/game-calc.js";
 import * as gameGcd from "./games/game-gcd.js";
+import * as gameProgression from "./games/game-progression.js";
 
 export default (gameTitle) => {
   let gameRules;
@@ -18,6 +19,10 @@ export default (gameTitle) => {
     case "gameGcd":
       gameRules = gameGcd.createGameRules();
       gameData = gameGcd.createGameData();
+      break;
+    case "gameProgression":
+      gameRules = gameProgression.createGameRules();
+      gameData = gameProgression.createGameData();
       break;
   }
 
