@@ -1,4 +1,3 @@
-// game-progression.js
 import getRandomNumber from '../utils.js';
 
 const createGameRules = () => 'What number is missing in the progression?';

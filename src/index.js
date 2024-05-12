@@ -1,4 +1,3 @@
-// index.js
 import readlineSync from 'readline-sync';
 
 const startGame = (generateGameData) => {
