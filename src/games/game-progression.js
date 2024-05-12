@@ -1,31 +1,36 @@
+// game-progression.js
 import getRandomNumber from '../utils.js';
 
 const createGameRules = () => 'What number is missing in the progression?';
 
 const createGameData = () => {
-  const questions = [];
-  const correctAnswers = [];
-  const countOfRounds = 3;
-  for (let i = 0; i < countOfRounds; i += 1) {
-    const minFirstNumber = 1;
-    const maxFirstNumber = 99;
-    const firtsNumber = getRandomNumber(minFirstNumber, maxFirstNumber);
-    const minNubersGap = 2;
-    const maxNumbersGap = 9;
-    const numbersGap = getRandomNumber(minNubersGap, maxNumbersGap);
-    const progressionLength = 10;
-    const hiddenElementPosition = Math.floor(Math.random() * progressionLength);
-    let progressionElement;
-    const progression = [];
-    for (let j = 0; j < progressionLength; j += 1) {
-      progressionElement = firtsNumber + j * numbersGap;
+  const minFirstNumber = 1;
+  const maxFirstNumber = 99;
+  const firstNumber = getRandomNumber(minFirstNumber, maxFirstNumber);
+
+  const minNubersGap = 2;
+  const maxNumbersGap = 9;
+  const numbersGap = getRandomNumber(minNubersGap, maxNumbersGap);
+
+  const progressionLength = 10;
+  const hiddenElementPosition = getRandomNumber(0, progressionLength - 1);
+
+  const progression = [];
+  let correctAnswer;
+
+  for (let i = 0; i < progressionLength; i += 1) {
+    const progressionElement = firstNumber + i * numbersGap;
+    if (i === hiddenElementPosition) {
+      progression.push('..');
+      correctAnswer = progressionElement.toString();
+    } else {
       progression.push(progressionElement);
     }
-    correctAnswers.push(String(progression[hiddenElementPosition]));
-    progression[hiddenElementPosition] = '..';
-    questions.push(progression.join(' '));
   }
-  return [questions, correctAnswers];
+
+  const question = progression.join(' ');
+
+  return [question, correctAnswer];
 };
 
 export { createGameRules, createGameData };
