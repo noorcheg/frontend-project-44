@@ -1,3 +1,5 @@
+import getRandomNumber from '../utils.js';
+
 const createGameRules = () => 'Find the greatest common divisor of given numbers.';
 
 const createGameData = () => {
@@ -7,8 +9,8 @@ const createGameData = () => {
   for (let i = 0; i < countOfRounds; i += 1) {
     const minNumber = 1;
     const maxNumber = 99;
-    const firstNumber = Math.floor(Math.random() * (maxNumber - minNumber + 1)) + minNumber;
-    const secondNumber = Math.floor(Math.random() * (maxNumber - minNumber + 1)) + minNumber;
+    const firstNumber = getRandomNumber(minNumber, maxNumber);
+    const secondNumber = getRandomNumber(minNumber, maxNumber);
     const question = `${firstNumber} ${secondNumber}`;
     let correctAnswer;
     let iterationsCount;

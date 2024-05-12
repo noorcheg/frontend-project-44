@@ -1,3 +1,5 @@
+import getRandomNumber from '../utils.js';
+
 const createGameRules = () => 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 const createGameData = () => {
@@ -7,7 +9,7 @@ const createGameData = () => {
   for (let i = 0; i < countOfRounds; i += 1) {
     const minNumber = 1;
     const maxNumber = 99;
-    const questionNumber = Math.floor(Math.random() * (maxNumber - minNumber + 1)) + minNumber;
+    const questionNumber = getRandomNumber(minNumber, maxNumber);
     const numberOfIterations = Math.floor(questionNumber / 2);
     let maxDivider;
     for (let j = 1; j <= numberOfIterations; j += 1) {
