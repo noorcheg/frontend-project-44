@@ -1,7 +1,7 @@
 {
   "name": "@hexlet/code",
   "version": "1.0.0",
-  "description": "[![Actions Status](https://github.com/noorcheg/frontend-project-44/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/noorcheg/frontend-project-44/actions)",
+  "description": "[![Actions Status](https://github.com/noorcheg/frontend-project-44/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/noorcheg/frontend-project-44/actions) Проект модуля #2 Игры разума",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
