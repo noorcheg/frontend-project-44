@@ -5,6 +5,8 @@ import * as gameGcd from './games/game-gcd.js';
 import * as gameProgression from './games/game-progression.js';
 import * as gamePrime from './games/game-prime.js';
 
+const countOfRounds = 3;
+
 export default (gameTitle) => {
   let gameRules;
   let gameData;
@@ -37,7 +39,6 @@ export default (gameTitle) => {
   const name = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${name}!`);
   console.log(gameRules);
-  const countOfRounds = 3;
   const [gameQuestion, correctAnswer] = gameData;
   for (let i = 0; i < countOfRounds; i += 1) {
     console.log(`Question: ${gameQuestion[i]}`);
