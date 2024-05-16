@@ -22,9 +22,10 @@ const createGameData = () => {
   const progressionLength = 10;
   const hiddenElementPosition = getRandomNumber(0, progressionLength - 1);
 
-  const question = createProgression(firstNumber, numbersGap, progressionLength);
-  const correctAnswer = question[hiddenElementPosition].toString();
-  question[hiddenElementPosition] = '..';
+  const progression = createProgression(firstNumber, numbersGap, progressionLength);
+  const correctAnswer = progression[hiddenElementPosition].toString();
+  progression[hiddenElementPosition] = '..';
+  const question = progression.join(' ');
 
   return [question, correctAnswer];
 };
