@@ -1,5 +1,7 @@
 import getRandomNumber from '../utils.js';
 
+const isEven = (num) => num % 2 === 0;
+
 const createGameRules = 'Answer "yes" if the number is even, otherwise answer "no".';
 
 const createGameData = () => {
@@ -7,7 +9,7 @@ const createGameData = () => {
   const maxNumber = 99;
   const question = getRandomNumber(minNumber, maxNumber);
   let correctAnswer;
-  if (question % 2 === 0) {
+  if (isEven(question)) {
     correctAnswer = 'yes';
   } else {
     correctAnswer = 'no';
