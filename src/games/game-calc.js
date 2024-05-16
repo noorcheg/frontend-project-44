@@ -13,7 +13,7 @@ const calculate = (firstNumber, secondNumber, operation) => {
   }
 };
 
-const createGameRules = () => 'What is the result of the expression?';
+const createGameRules = 'What is the result of the expression?';
 
 const createGameData = () => {
   const minNumber = 1;

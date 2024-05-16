@@ -1,6 +1,6 @@
 import getRandomNumber from '../utils.js';
 
-const createGameRules = () => 'Answer "yes" if given number is prime. Otherwise answer "no".';
+const createGameRules = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 const createGameData = () => {
   const minNumber = 1;

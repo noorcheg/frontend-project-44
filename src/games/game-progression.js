@@ -1,6 +1,6 @@
 import getRandomNumber from '../utils.js';
 
-const createGameRules = () => 'What number is missing in the progression?';
+const createGameRules = 'What number is missing in the progression?';
 
 const createGameData = () => {
   const minFirstNumber = 1;

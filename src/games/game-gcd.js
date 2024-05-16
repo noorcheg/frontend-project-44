@@ -1,6 +1,6 @@
 import getRandomNumber from '../utils.js';
 
-const createGameRules = () => 'Find the greatest common divisor of given numbers.';
+const createGameRules = 'Find the greatest common divisor of given numbers.';
 
 const createGameData = () => {
   const minNumber = 1;

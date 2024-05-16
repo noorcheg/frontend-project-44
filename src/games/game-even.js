@@ -1,6 +1,6 @@
 import getRandomNumber from '../utils.js';
 
-const createGameRules = () => 'Answer "yes" if the number is even, otherwise answer "no".';
+const createGameRules = 'Answer "yes" if the number is even, otherwise answer "no".';
 
 const createGameData = () => {
   const minNumber = 1;
