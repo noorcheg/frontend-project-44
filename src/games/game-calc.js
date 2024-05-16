@@ -15,12 +15,13 @@ const calculate = (firstNumber, secondNumber, operation) => {
 
 const createGameRules = 'What is the result of the expression?';
 
+const operations = ['+', '-', '*'];
+
 const createGameData = () => {
   const minNumber = 1;
   const maxNumber = 99;
   const firstNumber = getRandomNumber(minNumber, maxNumber);
   const secondNumber = getRandomNumber(minNumber, maxNumber);
-  const operations = ['+', '-', '*'];
   const operation = operations[getRandomNumber(0, operations.length - 1)];
   const question = `${firstNumber} ${operation} ${secondNumber}`;
   const correctAnswer = calculate(firstNumber, secondNumber, operation).toString();
