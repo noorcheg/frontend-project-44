@@ -9,7 +9,7 @@ const calculate = (firstNumber, secondNumber, operation) => {
     case '*':
       return firstNumber * secondNumber;
     default:
-      return 'error';
+      throw new Error(`Unknown operation: '${operation}'!`);
   }
 };
 
