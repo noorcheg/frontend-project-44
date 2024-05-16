@@ -1,5 +1,13 @@
 import getRandomNumber from '../utils.js';
 
+const createProgression = (firstNumber, numbersGap, progressionLength) => {
+  const progression = [];
+  for (let i = 0; i < progressionLength; i += 1) {
+    progression.push(firstNumber + i * numbersGap);
+  }
+  return progression;
+};
+
 const createGameRules = 'What number is missing in the progression?';
 
 const createGameData = () => {
@@ -14,20 +22,9 @@ const createGameData = () => {
   const progressionLength = 10;
   const hiddenElementPosition = getRandomNumber(0, progressionLength - 1);
 
-  const progression = [];
-  let correctAnswer;
-
-  for (let i = 0; i < progressionLength; i += 1) {
-    const progressionElement = firstNumber + i * numbersGap;
-    if (i === hiddenElementPosition) {
-      progression.push('..');
-      correctAnswer = progressionElement.toString();
-    } else {
-      progression.push(progressionElement);
-    }
-  }
-
-  const question = progression.join(' ');
+  const question = createProgression(firstNumber, numbersGap, progressionLength);
+  const correctAnswer = question[hiddenElementPosition].toString();
+  question[hiddenElementPosition] = '..';
 
   return [question, correctAnswer];
 };
