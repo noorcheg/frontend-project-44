@@ -5,9 +5,9 @@ const isEven = (num) => num % 2 === 0;
 const createGameRules = 'Answer "yes" if the number is even, otherwise answer "no".';
 
 const createGameData = () => {
-  const maxNumber = 99;
-  const minNumber = 1;
-  const question = getRandomNumber(minNumber, maxNumber);
+  const minimumNumber = 1;
+  const maximumNumber = 99;
+  const question = getRandomNumber(minimumNumber, maximumNumber);
   let correctAnswer;
   if (isEven(question)) {
     correctAnswer = 'yes';
